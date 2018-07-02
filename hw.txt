@@ -1,0 +1,12 @@
+# wasn't sure how to upload the HW
+# and none of my answers saved, so
+# here's my solution to exercise 12
+
+SELECT director, COUNT(*) AS Movies
+FROM movies
+GROUP BY director;
+
+SELECT director, SUM(domestic_sales + international_sales) AS total_sales
+FROM movies
+JOIN boxoffice ON id = movie_id
+GROUP BY director;
