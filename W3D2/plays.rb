@@ -59,7 +59,7 @@ class Play
         title = ?
     SQL
 
-    if !play.empty?
+    if play_by_title.empty?
       return nil
     else
       return Play.new(play_by_title[0])
@@ -101,7 +101,7 @@ class Playwright
         name = ?
     SQL
 
-    if !playwright.empty?
+    if playwright.empty?
       return nil
     else
       return Playwright.new(playwright[0])
