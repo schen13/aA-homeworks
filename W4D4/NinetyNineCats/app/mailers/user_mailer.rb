@@ -1,9 +1,8 @@
 class UserMailer < ApplicationMailer
-  default from: 'from@example.com'
+  default from: 'steven.chen313@gmail.com'
 
   def welcome_email(user)
     @user = user
-    @url = session_url
-    mail(to: @user.username, subject: 'Welcome to 99 Cats')
+    mail(to: user.username, subject: 'Welcome to 99 Cats')
   end
 end
